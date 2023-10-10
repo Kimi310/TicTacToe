@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 package tictactoe.bll;
-
 import java.util.Objects;
-
 /**
  *
  * @author Stegger
@@ -85,9 +83,8 @@ public class GameBoard implements IGameModel
                 return true;
             }
             o=0;
-            for (int col=2;col>=0;col--){ // checking diagonal 2
+            for (int col=sTable.length-1;col>=0;col--,o++){ // checking diagonal 2
                 checkTable[col] = sTable[col][o];
-                o++;
             }
             if(checkCheckTable()){
                 return true;

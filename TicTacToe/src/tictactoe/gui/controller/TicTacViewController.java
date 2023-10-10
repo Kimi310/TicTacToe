@@ -16,7 +16,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import tictactoe.bll.GameBoard;
 import tictactoe.bll.IGameModel;
-
 /**
  *
  * @author Stegger
@@ -47,7 +46,6 @@ public class TicTacViewController implements Initializable
             int c = (col == null) ? 0 : col;
             if (game.play(c, r))
             {
-                System.out.println(game.isGameOver());
                 if (game.isGameOver())
                 {
                     Button btn = (Button) event.getSource();
