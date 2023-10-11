@@ -59,7 +59,8 @@ public class GameBoard implements IGameModel
 
     public boolean isGameOver()
     {
-        if(turn>4){
+        System.out.println(turn);
+        if(turn>4&&turn<9){
             for(int row=0;row<sTable.length;row++){ // checking the rows
                 for(int col=0;col<sTable.length;col++){
                     checkTable[col]=sTable[col][row];
@@ -89,7 +90,7 @@ public class GameBoard implements IGameModel
             if(checkCheckTable()){
                 return true;
             }
-        }else if (turn>9){
+        }else if (turn>8){
             winner=-1;
             return true;
         }
