@@ -116,6 +116,7 @@ public class GameBoard implements IGameModel
             for(int k=0; k<sTable.length;k++){
                 sTable[i][k]="";
             }
+            checkTable[i]="";
         }
         winner=-1;
         turn=0;
@@ -129,7 +130,7 @@ public class GameBoard implements IGameModel
         }
     }
     private boolean checkCheckTable(){ //checks if there is a full row, column or diagonal
-        if(Objects.equals(checkTable[0], checkTable[1]) && Objects.equals(checkTable[1], checkTable[2])&&checkTable[1]!=null){
+        if(Objects.equals(checkTable[0], checkTable[1]) && Objects.equals(checkTable[1], checkTable[2])&& (checkTable[1]=="X" || checkTable[1]=="O")){
             checkWinner();
             return true;
         }
