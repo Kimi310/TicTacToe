@@ -112,7 +112,7 @@ public class GameBoard implements IGameModel
      */
     public void newGame()
     {
-        getNextPlayer();
+        player=1;
         for(int i=0;i<sTable.length;i++){
             for(int k=0; k<sTable.length;k++){
                 sTable[i][k]="";
