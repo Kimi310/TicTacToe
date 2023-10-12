@@ -24,7 +24,7 @@ public class TicTacToe extends Application
     {
      
         
-        Parent root = FXMLLoader.load(getClass().getResource("views/TicTacView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("views/MenuView.fxml"));
         
         Scene scene = new Scene(root);
         
@@ -33,8 +33,6 @@ public class TicTacToe extends Application
         stage.setResizable(false);
         stage.setTitle("Tic Tac Toe");
         stage.centerOnScreen();
-        
-        
         stage.show();
     }
 
